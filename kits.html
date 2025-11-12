@@ -164,29 +164,24 @@
 
   <!-- Contenedor de productos -->
   <div class="container">
-    <div class="product" data-name="Café honey 250gr" data-price="30000">
-      <span>Café honey 250gr</span>
-      <img src="ensayo.png" alt="Café honey 250gr" class="product-img" />
+    <div class="product" data-name="Coffee lover Italiano" data-price="120000">
+      <img src="coffeloverita.png" alt="Coffee lover Italiano" class="product-img" />
       <button>+</button>
     </div>
-    <div class="product" data-name="Café honey 500gr" data-price="55000">
-      <span>Café honey 500gr</span>
-      <img src="café250.png" alt="Café honey 250gr" class="product-img" />
+    <div class="product" data-name="Coffee lover Francés" data-price="98000">
+      <img src="coffeeloverfr.png" alt="Coffee lover Francés" class="product-img" />
       <button>+</button>
     </div>
-    <div class="product" data-name="Crema de café 290ml" data-price="25000">
-      <span>Crema de café 290ml</span>
-      <img src="crema290.png" alt="Crema de café 290ml" class="product-img" />
+    <div class="product" data-name="Cóctel Irlandés" data-price="90000">
+      <img src="coctel.png" alt="Cóctel Irlandés" class="product-img" />
       <button>+</button>
     </div>
-    <div class="product" data-name="Moka Italiana 3 tazas" data-price="58333">
-      <span>Moka Italiana 3 tazas</span>
-      <img src="moka.png" alt="Moka Italiana 3 tazas" class="product-img" />
+    <div class="product" data-name="Experto Italiano" data-price="58333">
+      <img src="expertoita.png" alt="Experto Italiano" class="product-img" />
       <button>+</button>
     </div>
-    <div class="product" data-name="Prensa Francesa 600ml" data-price="33333">
-      <span>Prensa Francesa 600ml</span>
-      <img src="prensa.png" alt="Prensa Francesa 600ml" class="product-img" />
+    <div class="product" data-name="Experto Francés" data-price="33333">
+      <img src="expertofr.png" alt="Experto Francés" class="product-img" />
       <button>+</button>
     </div>
   </div>
@@ -197,7 +192,8 @@
     <div id="selected-products"></div>
     <p id="mensaje" class="mensaje"></p>
     <p id="total" class="total"></p>
-    <p id="bonus-text" style="display: none;">🥄 Cuchara medidora gratis</p>
+    <p id="bonus-text" style="display: none;">🎁❓Detalle sorpresa
+    🛵Domicilo gratis área Metropolitana</p>
     <button id="whatsapp-btn" style="display:none;">
      <img src="wpp.png" alt="WhatsApp" class="whatsapp-icon">
      Enviar pedido por WhatsApp
@@ -245,13 +241,13 @@
         const bonusText = document.getElementById('bonus-text');
         const whatsappBtn = document.getElementById('whatsapp-btn');
 
-      if (selected.length < 2) {
-        mensaje.textContent = 'Selecciona al menos 2 productos para crear tu kit.';
+      if (selected.length < 1) {
+        mensaje.textContent = 'Selecciona tu kit favorito.';
         totalText.textContent = '';
         bonusText.style.display = 'none';
       } else {
         mensaje.textContent = '';
-        let total = selected.reduce((sum, item) => sum + item.price, 0) + 20000;
+        let total = selected.reduce((sum, item) => sum + item.price, 0);
         totalText.textContent = `Tu kit personalizado cuesta $${total.toLocaleString()}`;
         bonusText.style.display = 'block';
         whatsappBtn.style.display = 'flex';
@@ -260,7 +256,7 @@
             let productosTexto = selected
            .map(p => `• ${p.name}`) // Lista cada producto con viñeta
             .join('%0A'); // %0A = salto de línea en URL
-            let total = selected.reduce((sum, item) => sum + item.price, 0) + 20000;
+            let total = selected.reduce((sum, item) => sum + item.price, 0);
             let mensaje = `Hola 👋%0AQuiero mi kit personalizado con:%0A${productosTexto}%0A%0ATotal: $${total.toLocaleString()}%0A%0A¿Me confirmas la disponibilidad por favor?`;
         window.open(`https://api.whatsapp.com/send?phone=573502823060&text=${mensaje}`, '_blank');
         }
@@ -270,6 +266,7 @@
 
 </body>
 </html>
+
 
 
 
