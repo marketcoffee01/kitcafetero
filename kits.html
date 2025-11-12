@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Arma tu Kit de Café</title>
+  <title>Kit cafetero</title>
 
   <style>
     body {
       font-family: 'Poppins', sans-serif;
-      background-color: #f7f9fb;
+      background-color: #ffffff;
       color: #102b47;
       margin: 0;
       padding: 0;
@@ -20,31 +20,37 @@
     /* Logo */
     .logo {
       display: block;
-      margin: 100px auto 80px;
-      width: 150px;
+      margin: 10px auto 2px;
+      width: 200px;
     }
 
     h1 {
       text-align: center;
       color: #0d577b;
-      font-size: 1.8em;
-      max-width: 600px;
+      font-size: 1.5em;
+      max-width: 500px;
       margin: 40px auto;
     }
 
     .container {
-      width: 90%;
-      max-width: 400px;
-      margin-top: 20px;
+        width: 100%;
+        max-width: 600px; /* 🔹 ajusta el ancho total de tu catálogo */
+        margin: 0 auto; /* centra todo el contenedor */
+        display: grid; /* activa el grid */
+        grid-template-columns: repeat(2, 1fr); /* 🔹 2 columnas iguales */
+        gap: 0px; /* 🔹 espacio entre productos */
+        justify-items: center; /* centra los productos dentro de cada celda */
     }
 
     /* Producto */
     .product {
       background: white;
       border-radius: 16px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      padding: 15px 20px;
-      margin: 15px 0;
+      box-shadow: 0px 10px 10px rgba(27, 135, 197, 0.1);
+      padding: 0px 0px;
+      margin: 15px 0px;
+      width: 800%;
+      max-width: 200px;
       display: flex;
       flex-direction: column; /* ✅ Cambia la orientación a vertical */
       justify-content: center;
@@ -67,7 +73,7 @@
       max-width: 180px;
       border-radius: 12px;
       display: block;
-      margin: 10px auto;
+      margin: 10px 0px;
     }
 
     .product:hover {
@@ -102,7 +108,7 @@
 
     .summary h3 {
       margin-bottom: 10px;
-      color: #0d577b;
+      color: #0d577b;   
     }
 
     .summary p {
@@ -267,6 +273,8 @@
 
 </body>
 </html>
+
+
 
 
 
