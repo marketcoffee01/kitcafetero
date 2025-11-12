@@ -194,7 +194,7 @@
     <p id="mensaje" class="mensaje"></p>
     <p id="total" class="total"></p>
     <p id="bonus-text" style="display: none;">🎁❓Detalle sorpresa.<br>
-    🛵Domicilo gratis área Metropolitana</p>
+    🛵Domicilo gratis Área Metropolitana</p>
     <button id="whatsapp-btn" style="display:none;">
      <img src="wpp.png" alt="WhatsApp" class="whatsapp-icon">
      Enviar pedido por WhatsApp
@@ -249,7 +249,7 @@
       } else {
         mensaje.textContent = '';
         let total = selected.reduce((sum, item) => sum + item.price, 0);
-        totalText.textContent = `Tu kit personalizado cuesta $${total.toLocaleString()}`;
+        totalText.textContent = `Tu kit cuesta $${total.toLocaleString()}`;
         bonusText.style.display = 'block';
         whatsappBtn.style.display = 'flex';
 
@@ -258,7 +258,7 @@
            .map(p => `• ${p.name}`) // Lista cada producto con viñeta
             .join('%0A'); // %0A = salto de línea en URL
             let total = selected.reduce((sum, item) => sum + item.price, 0);
-            let mensaje = `Hola 👋%0AQuiero mi kit personalizado con:%0A${productosTexto}%0A%0ATotal: $${total.toLocaleString()}%0A%0A¿Me confirmas la disponibilidad por favor?`;
+            let mensaje = `Hola 👋%0AQuiero mi kit:%0A${productosTexto}%0A%0ATotal: $${total.toLocaleString()}%0A%0A¿Me confirmas la disponibilidad por favor?`;
         window.open(`https://api.whatsapp.com/send?phone=573502823060&text=${mensaje}`, '_blank');
         }
       }
@@ -267,6 +267,7 @@
 
 </body>
 </html>
+
 
 
 
