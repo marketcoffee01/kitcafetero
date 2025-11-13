@@ -157,6 +157,50 @@
         max-width: 24px; 
         max-height: 24px;
     }
+  
+    /* 🔹 Banner de testimonios */
+    .testimonios-banner {
+        width: 100%;
+        overflow: hidden;
+        background-color: #0d577b; /* color corporativo */
+        color: white;
+        padding: 15px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+    .testimonial-title {
+        font-size: 1.8rem; /* Tamaño grande */
+        color: #0d577b; /* Color oscuro */
+        margin-bottom: 25px; /* Espacio debajo */
+        font-weight: 600; /* Negrita media */
+    }
+
+    /* 🔹 Animación del desplazamiento */
+    .testimonios-scroll {
+        display: flex;
+        gap: 60px; /* espacio entre testimonios */
+        animation: scroll 30s linear infinite;
+    }
+
+    /* 🔹 Texto de cada testimonio */
+    .testimonios-scroll p {
+        font-size: 1.1rem;
+        font-style: italic;
+        text-align: center;
+    }
+
+    /* 🔹 Animación de movimiento */
+    @keyframes scroll {
+        0% {
+            transform: translateX(100%);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }  
+    
   </style>
 </head>
 <body>
@@ -193,6 +237,18 @@
     </div>
   </div>
 
+  <!-- Testimonios -->
+     <h2 class="testimonial-title">💬Lo que dicen nuestros clientes👇</h2>
+    <div class="testimonios-banner">
+     <div class="testimonios-scroll">
+        <p>"A mi mamá le gustó mucho la crema"</p>
+        <p>"Ch¡mb4 de aroma, muy rico nea"</p>
+        <p>"La crema está deliciosa, me la acabé en una sentada"</p>
+        <p>"Me gusta que sea orgánico"</p>
+        <p>"El café me gustó mucho"</p>
+     </div>
+    </div>
+  
   <!-- Resumen -->
   <div class="summary">
     <h3>Tu selección</h3>
@@ -273,6 +329,7 @@
 
 </body>
 </html>
+
 
 
 
